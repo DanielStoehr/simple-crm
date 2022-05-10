@@ -10,7 +10,6 @@ import { FormsModule } from '@angular/forms';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { getDatabase, provideDatabase } from '@angular/fire/database';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -27,6 +26,8 @@ import { NgModule } from '@angular/core';
 import { UserComponent } from './user/user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { MatMenuModule } from '@angular/material/menu';
+import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
+import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,8 @@ import { MatMenuModule } from '@angular/material/menu';
     UserComponent,
     DialogAddUserComponent,
     UserDetailComponent,
+    DialogEditAddressComponent,
+    DialogEditUserComponent,
   ],
   imports: [
     BrowserModule,

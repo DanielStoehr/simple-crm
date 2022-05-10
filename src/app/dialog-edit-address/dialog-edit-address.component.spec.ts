@@ -1,31 +1,28 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UserDetailComponent } from './user-detail.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { RouterModule } from '@angular/router';
+import { DialogEditAddressComponent } from './dialog-edit-address.component';
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../../environments/environment';
-import { MatMenuModule } from '@angular/material/menu';
 
-describe('UserDetailComponent', () => {
-  let component: UserDetailComponent;
-  let fixture: ComponentFixture<UserDetailComponent>;
+describe('DialogEditAddressComponent', () => {
+  let component: DialogEditAddressComponent;
+  let fixture: ComponentFixture<DialogEditAddressComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [UserDetailComponent],
+      declarations: [DialogEditAddressComponent],
       imports: [
         MatDialogModule,
-        RouterModule.forRoot([]),
-        AngularFireModule,
         AngularFireModule.initializeApp(environment.firebase),
-        MatMenuModule,
+        AngularFireModule,
       ],
+      providers: [{ provide: MatDialogRef, useValue: {} }],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UserDetailComponent);
+    fixture = TestBed.createComponent(DialogEditAddressComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
